@@ -1,114 +1,134 @@
-import React, { useRef, useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import '../assets/styles/Contact.scss';
-// import emailjs from '@emailjs/browser';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import SendIcon from '@mui/icons-material/Send';
+import emailjs from '@emailjs/browser';
 import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 
 function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
 
-  const [name, setName] = useState<string>('');
-  const [email, setEmail] = useState<string>('');
-  const [message, setMessage] = useState<string>('');
+  const [errors, setErrors] = useState({
+    name: false,
+    email: false,
+    message: false
+  });
 
-  const [nameError, setNameError] = useState<boolean>(false);
-  const [emailError, setEmailError] = useState<boolean>(false);
-  const [messageError, setMessageError] = useState<boolean>(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
-  const form = useRef();
-
-  const sendEmail = (e: any) => {
-    e.preventDefault();
-
-    setNameError(name === '');
-    setEmailError(email === '');
-    setMessageError(message === '');
-
-    /* Uncomment below if you want to enable the emailJS */
-
-    // if (name !== '' && email !== '' && message !== '') {
-    //   var templateParams = {
-    //     name: name,
-    //     email: email,
-    //     message: message
-    //   };
-
-    //   console.log(templateParams);
-    //   emailjs.send('service_id', 'template_id', templateParams, 'api_key').then(
-    //     (response) => {
-    //       console.log('SUCCESS!', response.status, response.text);
-    //     },
-    //     (error) => {
-    //       console.log('FAILED...', error);
-    //     },
-    //   );
-    //   setName('');
-    //   setEmail('');
-    //   setMessage('');
-    // }
+  const handleChange = (field: string) => (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [field]: e.target.value });
+    setErrors({ ...errors, [field]: false });
   };
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const newErrors = {
+      name: formData.name.trim() === '',
+      email: formData.email.trim() === '',
+      message: formData.message.trim() === ''
+    };
+
+    setErrors(newErrors);
+
+    const hasError = Object.values(newErrors).some(Boolean);
+    if (hasError) return;
+
+    emailjs
+      .send(
+        'service_11oo3db',
+        'template_mg6hzef',
+        formData,
+        'F1JeJNXJKrJZWMI_X'
+      )
+      .then(() => {
+        setFormData({ name: '', email: '', message: '' });
+      })
+      .catch((err) => {
+        console.error('Email send failed:', err);
+      });
+  };
+
+  // ------------------------------
+  // THEME HANDLING
+  // ------------------------------
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+
+  useEffect(() => {
+    // Apply the current theme to the document
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+
+  // Optional: listen for system theme changes if you want automatic sync
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleSystemChange = (e: MediaQueryListEvent) => {
+      if (!localStorage.getItem('theme')) {
+        setTheme(e.matches ? 'dark' : 'light');
+      }
+    };
+    mediaQuery.addEventListener('change', handleSystemChange);
+    return () => mediaQuery.removeEventListener('change', handleSystemChange);
+  }, []);
+
   return (
-    <div id="contact">
-      <div className="items-container">
-        <div className="contact_wrapper">
-          <h1>Contact Me</h1>
-          <p>Got a project waiting to be realized? Let's collaborate and make it happen!</p>
-          <Box
-            ref={form}
-            component="form"
-            noValidate
-            autoComplete="off"
-            className='contact-form'
-          >
-            <div className='form-flex'>
-              <TextField
-                required
-                id="outlined-required"
-                label="Your Name"
-                placeholder="What's your name?"
-                value={name}
-                onChange={(e) => {
-                  setName(e.target.value);
-                }}
-                error={nameError}
-                helperText={nameError ? "Please enter your name" : ""}
-              />
-              <TextField
-                required
-                id="outlined-required"
-                label="Email / Phone"
-                placeholder="How can I reach you?"
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
-                error={emailError}
-                helperText={emailError ? "Please enter your email or phone number" : ""}
-              />
-            </div>
-            <TextField
-              required
-              id="outlined-multiline-static"
-              label="Message"
-              placeholder="Send me any inquiries or questions"
-              multiline
-              rows={10}
-              className="body-form"
-              value={message}
-              onChange={(e) => {
-                setMessage(e.target.value);
-              }}
-              error={messageError}
-              helperText={messageError ? "Please enter the message" : ""}
-            />
-            <Button variant="contained" endIcon={<SendIcon />} onClick={sendEmail}>
-              Send
-            </Button>
-          </Box>
+    <div className="contact-wrapper">
+      <h1>Contact Me</h1>
+      <p>Drop me a message — I’d love to hear from you!</p>
+      <Box
+        component="form"
+        ref={formRef}
+        onSubmit={handleSubmit}
+        noValidate
+        autoComplete="off"
+      >
+        <div className="form-row">
+          <TextField
+            className="form-field"
+            label="Your Name"
+            placeholder="What's your name?"
+            variant="outlined"
+            value={formData.name}
+            onChange={handleChange('name')}
+            error={errors.name}
+            helperText={errors.name ? 'Name is required' : ''}
+            fullWidth
+          />
+          <TextField
+            className="form-field"
+            label="Email / Phone"
+            placeholder="How can I reach you?"
+            variant="outlined"
+            value={formData.email}
+            onChange={handleChange('email')}
+            error={errors.email}
+            helperText={errors.email ? 'Contact info is required' : ''}
+            fullWidth
+          />
         </div>
-      </div>
+        <TextField
+          label="Message"
+          placeholder="Send me any inquiries or questions"
+          multiline
+          rows={8}
+          variant="outlined"
+          value={formData.message}
+          onChange={handleChange('message')}
+          error={errors.message}
+          helperText={errors.message ? 'Message is required' : ''}
+          fullWidth
+        />
+        <Button type="submit" variant="contained">
+          Send
+        </Button>
+      </Box>
     </div>
   );
 }

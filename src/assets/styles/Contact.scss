@@ -1,48 +1,106 @@
-.contact_wrapper svg {
-  font-size: 1em;
-  vertical-align: middle;
-  margin-right: 5px;
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #050f0b;
+  --input-bg: #ffffff;
+  --placeholder-color: #888;
 }
 
-.contact-form {
-  padding-top: 20px;
+/* Explicit dark mode via attribute */
+:root[data-theme='dark'] {
+  --bg-color: #121212;
+  --text-color: #f1f1f1;
+  --input-bg: #1e1e1e;
+  --placeholder-color: #aaa;
+}
+
+/* Explicit light mode via attribute */
+:root[data-theme='light'] {
+  --bg-color: #f9f9f9;
+  --text-color: #050f0b;
+  --input-bg: #ffffff;
+  --placeholder-color: #888;
+}
+
+/* Fallback: only apply system preference if no data-theme attribute */
+:root:not([data-theme]) {
+  @media (prefers-color-scheme: dark) {
+    --bg-color: #121212;
+    --text-color: #f1f1f1;
+    --input-bg: #1e1e1e;
+    --placeholder-color: #aaa;
+  }
+}
+
+.contact-wrapper {
+  padding: 2rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .form-field {
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .MuiOutlinedInput-root {
+    background-color: var(--input-bg);
+
+    input,
+    textarea {
+      color: var(--text-color);
+      caret-color: var(--text-color);
+    }
+
+    fieldset {
+      border-color: #ccc;
+    }
+
+    &.Mui-focused fieldset {
+      border-color: #5000ca;
+    }
+  }
+
+  ::placeholder {
+    color: var(--placeholder-color);
+    opacity: 1;
+  }
 
   button {
-    float: right;
-    background-color: white;
-    color: #050f0b;
-  }
-
-  button:hover {
+    align-self: flex-end;
     background-color: #5000ca;
     color: white;
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #3a009e;
+    }
   }
-
-  fieldset {
-    background-color: white;
-  }
-}
-
-label {
-  font-size: 1.2rem;
-  font-family: 'DomaineDispNar-Medium', sans-serif;
-}
-
-.form-flex {
-  display: flex;
-  gap: 15px;
-  padding-bottom: 15px;
-}
-
-.form-flex .MuiFormControl-root {
-  width: 100%;
-}
-
-form {
-  width: 100% !important;
-}
-
-.body-form {
-  width: 100% !important;
-  margin-bottom: 15px !important;
 }

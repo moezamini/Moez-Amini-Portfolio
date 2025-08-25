@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/Moez_Amini/static/css/main.6914193b.css",
-    "main.js": "/Moez_Amini/static/js/main.807740f7.js",
+    "main.css": "/Moez_Amini/static/css/main.da5ba34d.css",
+    "main.js": "/Moez_Amini/static/js/main.a54d5c8b.js",
     "static/js/453.ace21015.chunk.js": "/Moez_Amini/static/js/453.ace21015.chunk.js",
     "static/media/mock10.png": "/Moez_Amini/static/media/mock10.2d05b02ba569a430a255.png",
     "static/media/mock09.png": "/Moez_Amini/static/media/mock09.e18677ccfc932e52d754.png",
     "static/media/mock08.png": "/Moez_Amini/static/media/mock08.13f46873fdbd382f4b76.png",
+    "static/media/Profile.jpg": "/Moez_Amini/static/media/Profile.f935e7a0860a82844fcf.jpg",
     "static/media/mock04.png": "/Moez_Amini/static/media/mock04.f7b5679efade992a078c.png",
     "static/media/bg-light.png": "/Moez_Amini/static/media/bg-light.bac0efb485244a522981.png",
     "static/media/mock07.png": "/Moez_Amini/static/media/mock07.3f1110f482232b33c6a2.png",
@@ -17,12 +18,12 @@
     "static/media/mock03.png": "/Moez_Amini/static/media/mock03.a4600719e0b5d2a3155b.png",
     "static/media/Avatar.png": "/Moez_Amini/static/media/Avatar.390a5e656aad2046fc81.png",
     "index.html": "/Moez_Amini/index.html",
-    "main.6914193b.css.map": "/Moez_Amini/static/css/main.6914193b.css.map",
-    "main.807740f7.js.map": "/Moez_Amini/static/js/main.807740f7.js.map",
+    "main.da5ba34d.css.map": "/Moez_Amini/static/css/main.da5ba34d.css.map",
+    "main.a54d5c8b.js.map": "/Moez_Amini/static/js/main.a54d5c8b.js.map",
     "453.ace21015.chunk.js.map": "/Moez_Amini/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6914193b.css",
-    "static/js/main.807740f7.js"
+    "static/css/main.da5ba34d.css",
+    "static/js/main.a54d5c8b.js"
   ]
 }

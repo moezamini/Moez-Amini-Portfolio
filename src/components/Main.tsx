@@ -15,7 +15,7 @@ function Main() {
         </div>
         <div className="content">
           <div className="social_icons">
-            <a href="https://github.com/moezamini/Moez-Amini-Portfolio/blob/main/Amini_Moez_Re.pdf" target="_blank" rel="noreferrer"><GitHubIcon/></a>
+            <a href="https://github.com/moezamini/Moez_Amini/blob/main/Moez%20Amini%20Resume.pdf" target="_blank" rel="noreferrer"><GitHubIcon/></a>
             <a href="https://www.linkedin.com/in/moezamini/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
             <a href="mailto:ma872@cornell.edu" target="_blank" rel="noreferrer"><EmailIcon/></a>
           </div>
@@ -23,7 +23,7 @@ function Main() {
           <p>Mechanical Engineer</p>
 
           <div className="mobile_social_icons">
-            <a href="https://github.com/moezamini" target="_blank" rel="noreferrer"><GitHubIcon/></a>
+            <a href="https://github.com/moezamini/Moez_Amini/blob/main/Moez%20Amini%20Resume.pdf" target="_blank" rel="noreferrer"><GitHubIcon/></a>
             <a href="https://www.linkedin.com/in/moezamini/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
             <a href="mailto:ma872@cornell.edu" target="_blank" rel="noreferrer"><EmailIcon/></a>
           </div>

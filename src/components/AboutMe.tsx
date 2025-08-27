@@ -30,61 +30,48 @@ function AboutMe() {
                     <h2>Specialized Skills</h2>
                     <div className="skills-columns">
                         <div className="skills-column">
-                            <h3>Engineering Software & Tools</h3>
+                            <h3>Engineering</h3>
                             <ul>
-                                <li>NX</li>
-                                <li>Teamcenter (TC)</li>
-                                <li>SolidWorks</li>
-                                <li>Fusion360</li>
-                                <li>ANSYS (Workbench, Maxwell, Fluent)</li>
-                                <li>AutoCAD</li>
-                                <li>Simulink</li>
-                                <li>Git / GitHub</li>
+                            <li>CAD: NX, SolidWorks, Fusion 360</li>
+                            <li>Finite Element Analysis: ANSYS (Workbench, Maxwell, Fluent), MATLAB</li>
+                            <li>DFMEA (Design Failure Mode & Effects Analysis)</li>
+                            <li>Mechatronics & Feedback Control</li>
+                            <li>Robotics & Automation</li>
+                            <li>Circuit Design</li>
+                            <li>Machining: CNC (Green Apron Certified), General Fabrication</li>
+                            <li>Laser Cutting & 3D Printing</li>
+                            <li>Cleanroom Protocols & Safety</li>
+                            <li>Fluids, Pneumatics, Cryogenics</li>
+                            <li>High Magnetic Field</li>
+                            <li>Optics, Photonics , Lasers & Transceivers</li>
+                            <li>Bit Error Rate Tester (BERT)</li>
+                            <li>LabVIEW & Simulink</li>
+                            <li>Git / GitHub </li>
+                            </ul>
+                        </div>
+                        <div className="skills-column">
+                        <h3>Programming & Control</h3>
+                            <ul>
+                            <li>Python, MATLAB, Java, C++</li>
+                            <li>Algorithms & Data Structures</li>
+                            <li>Arduino, Raspberry Pi, Microcontrollers, TwinCAT</li>
+                            <li>Embedded Operating Systems</li>
+                            <li>Control Systems & Embedded Programming</li>
+                            <li>Website Development</li>
+                            <li>LaTeX</li>
+                            <li>Microsoft Office Suite</li>
+                            </ul>
 
-                                
+                            <h3>Other</h3>
+                            <ul>
+                            <li>Languages: English, Persian/Farsi/Dari, Pashto, Turkish</li>
+                            <li>Video Editing</li>
+                            <li>Side Projects & Prototyping</li>
+                            <li>Sailing, Paddle Boarding, Swimming, Hiking</li>
+                            <li>On a Mission of Food Exploration</li>
                             </ul>
                         </div>
-                        <div className="skills-column">
-                            <h3>Technical / Hardware</h3>
-                            <ul>
-                                <li>Cleanroom</li>
-                                <li>Pneumatics</li>
-                                <li>Cryogenics</li>
-                                
-                                <li>High Magnetic Fields</li>
-                                <li>Bit Error Rate Tester (BERT)</li>
-                                <li>Servos & Actuators</li>
-                                <li>Linear Induction Motors (LIM)</li>
-                                <li>General Machining / Fabrication</li>
-                                <li>CNC Machining (Green Apron Certified)</li>
-                                <li>Transceivers</li>
-                                <li>Optics & Photonics</li>
-                                <li>Laser cutting</li>
-                                <li>3D printing</li>
-                            </ul>
-                        </div>
-                        <div className="skills-column">
-                            <h3>Programming & Control</h3>
-                            <ul>
-                                <li>Python</li>
-                                <li>Java</li>
-                                <li>MATLAB</li>
-                                <li>C++</li>
-                                <li>TwinCAT</li>
-                                <li>LaTeX</li>
-                                <li>MS Office Suit</li>
-                                <li>Arduino</li>
-                                <li>Raspberry Pi</li>
-                                <li>Microcontrollers</li>
-                            </ul>
-                            <h3>Languages</h3>
-                            <ul>
-                                <li>English (Proficient)</li>
-                                <li>Persian (Proficient)</li>
-                                <li>Pashto (Fluent)</li>
-                                <li>Turkish (Fluent)</li>
-                            </ul>
-                        </div>
+                       
                     </div>
                 </div>
             </div>

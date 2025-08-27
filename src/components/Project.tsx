@@ -47,22 +47,16 @@ import H2 from "../assets/images/EB/H2.png";
 import H3 from "../assets/images/EB/H3.png";
 import H4 from "../assets/images/EB/H4.png";
 import H5 from "../assets/images/EB/H5.jpeg";
-import H6 from "../assets/images/EB/H6.png";
-import H7 from "../assets/images/EB/H7.png";
 import H8 from "../assets/images/EB/H8.png";
 import H9 from "../assets/images/EB/H9.png";
-import H10 from "../assets/images/EB/H10.png";
 import H11 from "../assets/images/EB/H11.png";
 import H12 from "../assets/images/EB/H12.png";
 import H13 from "../assets/images/EB/H13.png";
 import H14 from "../assets/images/EB/H14.png";
 import H15 from "../assets/images/EB/H15.png";
-import H16 from "../assets/images/EB/H16.png";
 import S1 from "../assets/images/SOS/S1.png";
 import S2 from "../assets/images/SOS/S2.png";
 import S3 from "../assets/images/SOS/S3.gif";
-import mock02 from "../assets/images/mock02.png";
-import mock03 from "../assets/images/mock03.png";
 
 const projects = [
   {
@@ -93,8 +87,7 @@ const projects = [
     description:
       "Meet the Black Pearl — It was the fastest robot in Cornell’s 2026 Cube Craze Competition.",
     details: [
-      "Designed and built an autonomous robot optimized for speed and efficiency in competitive cube collection. Implemented a boost converter tuned to 24V to maximize motor RPM, and added custom traction enhancements using rubberized wheels. Developed a one-way intake door and side wall system from lightweight poster board to capture and retain cubes while minimizing moving parts. Integrated dual QTI sensors with a custom filtering algorithm to detect field boundaries and guide a diamond-shaped navigation path. Please don’t hesitate to reach out if you’d like to hear more—I’d love to share more about it!",
-    ],
+"Designed and built an autonomous robot optimized for speed and efficiency in a competitive cube-collection challenge, working within strict budget and component constraints. Implemented a boost converter to step 6 V up to 24 V, maximizing motor RPM. Developed a lightweight, one-way intake door and side-wall system from poster board to minimize the mass and capture and retain cubes with minimal moving parts. Integrated dual QTI sensors with a custom filtering algorithm to detect field boundaries and navigate a diamond-shaped path. Happy to share more details—feel free to reach out!",    ],
   },
   {
     title: "Cord Conundrum",
@@ -109,7 +102,7 @@ const projects = [
   },
   {
     title: "Pnuematic & Magnetic Brakes for Hyperloop Maglev Train",
-    images: [H2, H8,  H1, H9, H11, H12, H13, H4, H3, H5, H14, H15, H16],
+    images: [H2, H8,  H1, H9, H11, H12, H13, H4, H3, H5, H14, H15],
     description:
       "Led Braking Team of Cornell Hyperloop Project Team.",
     details: [

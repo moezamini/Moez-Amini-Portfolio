@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Moez_Amini/static/css/main.be2821c8.css",
-    "main.js": "/Moez_Amini/static/js/main.9b9a5acb.js",
+    "main.js": "/Moez_Amini/static/js/main.db5405d5.js",
     "static/js/453.ace21015.chunk.js": "/Moez_Amini/static/js/453.ace21015.chunk.js",
     "static/media/C9.gif": "/Moez_Amini/static/media/C9.ddc3bf6804cf55896eb3.gif",
     "static/media/A4.png": "/Moez_Amini/static/media/A4.53e341ad4d7a2f49fab4.png",
@@ -64,11 +64,11 @@
     "static/media/slick.woff": "/Moez_Amini/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Moez_Amini/index.html",
     "main.be2821c8.css.map": "/Moez_Amini/static/css/main.be2821c8.css.map",
-    "main.9b9a5acb.js.map": "/Moez_Amini/static/js/main.9b9a5acb.js.map",
+    "main.db5405d5.js.map": "/Moez_Amini/static/js/main.db5405d5.js.map",
     "453.ace21015.chunk.js.map": "/Moez_Amini/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.be2821c8.css",
-    "static/js/main.9b9a5acb.js"
+    "static/js/main.db5405d5.js"
   ]
 }

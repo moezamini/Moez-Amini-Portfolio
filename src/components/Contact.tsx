@@ -79,9 +79,9 @@ function Contact() {
   }, []);
 
   return (
-    <div className="contact-wrapper">
+    <div className="contact-wrapper"id="contact">
       <h1>Contact Me</h1>
-      <p>Drop me a message — I’d love to hear from you!</p>
+      <p>Please feel free to reach out and say Hello!😊</p>
       <Box
         component="form"
         ref={formRef}

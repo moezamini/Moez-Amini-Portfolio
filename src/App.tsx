@@ -10,7 +10,6 @@ import {
 } from "./components";
 import FadeIn from './components/FadeIn';
 import './index.scss';
-
 function App() {
     const [mode, setMode] = useState<string>('dark');
 

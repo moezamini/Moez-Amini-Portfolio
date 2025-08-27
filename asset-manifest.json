@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Moez_Amini/static/css/main.be2821c8.css",
-    "main.js": "/Moez_Amini/static/js/main.90f091ae.js",
+    "main.js": "/Moez_Amini/static/js/main.9b9a5acb.js",
     "static/js/453.ace21015.chunk.js": "/Moez_Amini/static/js/453.ace21015.chunk.js",
     "static/media/C9.gif": "/Moez_Amini/static/media/C9.ddc3bf6804cf55896eb3.gif",
     "static/media/A4.png": "/Moez_Amini/static/media/A4.53e341ad4d7a2f49fab4.png",
@@ -33,7 +33,6 @@
     "static/media/O2.png": "/Moez_Amini/static/media/O2.faad5a59023fdb229d35.png",
     "static/media/C7.png": "/Moez_Amini/static/media/C7.c29fed40fb45eef63941.png",
     "static/media/C1.jpeg": "/Moez_Amini/static/media/C1.1a75a44736f8134831b5.jpeg",
-    "static/media/H16.png": "/Moez_Amini/static/media/H16.95accee0296cb6693c1f.png",
     "static/media/E1.jpeg": "/Moez_Amini/static/media/E1.9439222dca84e3aa8ea3.jpeg",
     "static/media/C8.png": "/Moez_Amini/static/media/C8.f749798ad1cee5aeeb31.png",
     "static/media/C3.png": "/Moez_Amini/static/media/C3.186bd90c1b22250ba3c0.png",
@@ -65,11 +64,11 @@
     "static/media/slick.woff": "/Moez_Amini/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Moez_Amini/index.html",
     "main.be2821c8.css.map": "/Moez_Amini/static/css/main.be2821c8.css.map",
-    "main.90f091ae.js.map": "/Moez_Amini/static/js/main.90f091ae.js.map",
+    "main.9b9a5acb.js.map": "/Moez_Amini/static/js/main.9b9a5acb.js.map",
     "453.ace21015.chunk.js.map": "/Moez_Amini/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.be2821c8.css",
-    "static/js/main.90f091ae.js"
+    "static/js/main.9b9a5acb.js"
   ]
 }
